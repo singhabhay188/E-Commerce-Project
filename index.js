@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
+
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 
 //Routes
 const ownersRoutes = require('./routes/ownersRoutes');
@@ -11,7 +15,7 @@ const connectMongo = require('./controllers/mongooseConnect');
 connectMongo();
 
 
-app.use('/owners',ownersRoutes);
+app.use('/owner',ownersRoutes);
 app.use('/products',productsRoutes);
 app.use('/users',usersRoutes);
 
