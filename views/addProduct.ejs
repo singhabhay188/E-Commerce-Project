@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product | MyCommerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body class="w-screen min-h-screen bg-gray-300 overflow-x-hidden">
+    <nav class="w-full p-3 shadow-md flex items-center bg-slate-50">
+        <h1 class="text-xl lg:text-2xl font-semibold">
+            <a href="#">MyCommerce</a>
+            <i class="ri-shopping-cart-fill text-xl lg:text-2xl"></i>
+        </h1>
+        <i class="ri-flashlight-fill ml-auto text-2xl lg:text-3xl text-yellow-400 rotate-12"></i>
+    </nav>
+    <main class="w-full p-4">
+        <h1 class="text-3xl lg:text-4xl font-semibold italic">Welcome Admin</h1>
+        <hr class="my-3 h-[2px] w-full bg-black">
+        <main class="w-full py-4 flex flex-col md:flex-row gap-8">
+            <div id="sidebar" class="flex flex-col gap-4 w-max p-4">
+                <p>
+                    <a class="font-semibold text-lg text-gray-500" href="/owner/all">All Products</a>
+                </p>
+                <p>
+                    <a class="font-semibold text-lg" href="#">Create New Product</a>
+                </p>
+            </div>
+            <div id="mainbar" class="flex-1 p-4 space-y-6">
+                <h1 class="font-semibold text-2xl lg:text-3xl">Create New Product</h1>
+                
+                <form id="myForm" action="/owner/add" method="post" class="space-y-6" enctype="multipart/form-data">
+                    
+                    <div class="space-y-4 space-x-4">
+                        <h2 class="text-xl lg:text-2xl font-semibold">Product Details</h2>
+                        
+                        <span class="mt-4 inline-block">Product Image</span>
+                        <label for="image" id="fileLabel" class="py-2 px-4 ml-4 rounded-full bg-blue-500 text-white">Select File</label>
+                        <input type="file" name="image" id="image" class="hidden">
+
+                        <br>
+
+                        <input class="py-2 px-3 rounded-lg min-w-[250px]" type="text" name="name" placeholder="Product Name">
+
+                        <br>
+
+                        <input class="py-2 px-3 rounded-lg w-[180px]" type="number" name="price" placeholder="Product Price">
+                        <input class="py-2 px-3 rounded-lg w-[180px]" type="number" min=0 max=100 name="discount" placeholder="Discount Percent">
+                    </div>
+
+                    <div class="space-y-4 space-x-4">
+                        <h2 class="text-xl lg:text-2xl font-semibold">Panel Details</h2>
+                        <input class="py-2 px-3 rounded-lg w-[180px]" type="text" name="bgColor" placeholder="Background Color">
+                        <input class="py-2 px-3 rounded-lg w-[180px]" type="text" name="panelColor" placeholder="Panel Color">
+                        <input class="py-2 px-3 rounded-lg w-[180px] block" type="text" name="textColor" placeholder="Text Color">
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Add Product</button>
+                </form>
+            </div>
+        </main>
+    </main>
+</body>
+</html>

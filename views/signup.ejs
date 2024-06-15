@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp | ECommerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body class="w-screen h-screen flex flex-col gap-4 font-mono items-center bg-gray-400">
+    <nav class="w-full p-3 shadow-md flex items-center bg-slate-50">
+        <h1 class="text-xl lg:text-2xl font-semibold">
+            <a href="#">MyCommerce</a>
+            <i class="ri-shopping-cart-fill text-xl lg:text-2xl"></i>
+        </h1>
+        <i class="ri-flashlight-fill ml-auto text-2xl lg:text-3xl text-yellow-400 rotate-12"></i>
+    </nav>
+    <main class="flex-1 flex flex-col gap-4">
+        <h1 class="text-3xl lg:text-4xl font-semibold uppercase mt-32 mb-8">SignUp to Shop</h1>
+        <form action="/users/signup" method="POST" class="flex flex-col gap-4 w-[90vw] max-w-[400px]">
+            <input class="px-4 py-2 rounded-lg border-2 border-zinc-400 outline-none focus:border-zinc-800" type="text" name="email" placeholder="Email" required>
+            <input class="px-4 py-2 rounded-lg border-2 border-zinc-400 outline-none focus:border-zinc-800" type="name" name="name" placeholder="Name" required>
+            <input class="px-4 py-2 rounded-lg border-2 border-zinc-400 outline-none focus:border-zinc-800" type="password" name="password" placeholder="Password" required>
+            <button class="bg-blue-400 text-white px-6 py-2 rounded-full w-max mx-auto" type="submit">Create My Account</button>
+        </form>
+        <p class="text-center">Already have a account? <a class="italic underline" href="/users/login">Login Now</a></p>
+    </main>
+</body>
+</html>
