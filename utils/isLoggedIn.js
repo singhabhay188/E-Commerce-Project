@@ -13,7 +13,7 @@ module.exports.isLoggedIn = async (req,res,next) => {
             req.flash('error','Invalid Credentials Login Again');
             return res.redirect('/users/login');
         }
-        req.user = user;
+        req.session.user = user;
         next();
     }
     catch(err){

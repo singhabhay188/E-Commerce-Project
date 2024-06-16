@@ -5,7 +5,9 @@ const upload = require('../config/multer-setup');
 const Product = require('../models/productModel');
 
 router.get('/add',(req,res)=>{
-    res.render('addProduct')
+    let success = req.flash('success');
+    console.log('success',success);
+    res.render('addProduct',{success});
 });
 
 router.post('/add',upload.single('image'),async (req,res)=>{
@@ -18,8 +20,8 @@ router.post('/add',upload.single('image'),async (req,res)=>{
         });
 
         await nproduct.save();
-    
-        res.send(nproduct);
+        req.flash('success','Product added successfully');
+        res.redirect('/owner/add');
     }
     catch(e){
         console.log(e);
