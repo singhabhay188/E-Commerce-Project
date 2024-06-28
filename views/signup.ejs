@@ -8,13 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body class="w-screen h-screen flex flex-col gap-4 font-mono items-center bg-gray-400">
-    <nav class="w-full p-3 shadow-md flex items-center bg-slate-50">
-        <h1 class="text-xl lg:text-2xl font-semibold">
-            <a href="#">MyCommerce</a>
-            <i class="ri-shopping-cart-fill text-xl lg:text-2xl"></i>
-        </h1>
-        <i class="ri-flashlight-fill ml-auto text-2xl lg:text-3xl text-yellow-400 rotate-12"></i>
-    </nav>
+    <%- include('templates/header') -%>
     <main class="flex-1 flex flex-col gap-4">
         <h1 class="text-3xl lg:text-4xl font-semibold uppercase mt-32 mb-8">SignUp to Shop</h1>
         <form action="/users/signup" method="POST" class="flex flex-col gap-4 w-[90vw] max-w-[400px]">

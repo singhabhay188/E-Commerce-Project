@@ -8,13 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body class="w-screen min-h-screen overflow-x-hidden">
-    <nav class="w-full p-3 sm:px-5 shadow-md flex items-center bg-slate-50">
-        <h1 class="text-xl lg:text-2xl font-semibold">
-            <a href="#">MyCommerce</a>
-            <i class="ri-shopping-cart-fill text-xl lg:text-2xl"></i>
-        </h1>
-        <i class="ri-flashlight-fill ml-auto text-2xl lg:text-3xl text-yellow-400 rotate-12"></i>
-    </nav>
+    <%- include('templates/header') -%>
     <main class="w-full p-4">
         <h1 class="text-3xl lg:text-4xl font-semibold italic">Welcome <%= name %></h1>
         <hr class="my-3 h-[2px] w-full bg-black">
